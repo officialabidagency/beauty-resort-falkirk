@@ -1,0 +1,61 @@
+.services-tabs-wrapper {
+  position: relative;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.98);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  margin-top: 70px;
+}
+
+.services-tabs {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 18px 0;
+  padding-left: 200px;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin: 0 auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.services-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.services-tab {
+  white-space: nowrap;
+  padding: 10px 24px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gray-300);
+  border: 1px solid var(--gray-700);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.services-tab:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .services-tabs-wrapper {
+    margin-top: 55px;
+  }
+
+  .services-tabs {
+    justify-content: flex-start;
+    padding: 12px 16px;
+    padding-left: 16px;
+    gap: 8px;
+  }
+
+  .services-tab {
+    padding: 8px 16px;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+}
