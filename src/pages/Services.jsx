@@ -8,11 +8,11 @@ import './Services.css';
 import '../index.css';
 
 const categories = [
-  { key: 'hair', id: 'hair', title: 'Hair Services', description: 'Precision cuts, luxury colour, and styling — crafted to perfection.', image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=50' },
-  { key: 'headSpa', id: 'head-spa', title: 'Japanese Head Spa', description: 'Traditional scalp therapy for deep relaxation and scalp health.', image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=50' },
-  { key: 'browsLashes', id: 'brows-lashes', title: 'Brows & Lashes', description: 'Perfectly shaped brows, lamination, lash lifts, and tinting.', image: 'https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=800&q=50' },
-  { key: 'makeup', id: 'makeup', title: 'Makeup', description: 'Glamorous party makeup, bridal looks, and bespoke hairstyling.', image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=50' },
-  { key: 'facials', id: 'facials', title: 'Facials & Skin Treatments', description: 'Advanced facials, hydrafacial, microneedling, and dermaplaning.', image: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&q=50' },
+  { key: 'hair', id: 'hair', title: 'Hair Services', description: 'Precision cuts, luxury colour, and styling — crafted to perfection.', image: '/images/hair.jpg' },
+  { key: 'headSpa', id: 'head-spa', title: 'Japanese Head Spa', description: 'Traditional scalp therapy for deep relaxation and scalp health.', image: '/images/headspa.jpg' },
+  { key: 'browsLashes', id: 'brows-lashes', title: 'Brows & Lashes', description: 'Perfectly shaped brows, lamination, lash lifts, and tinting.', image: '/images/lashes.jpg' },
+  { key: 'makeup', id: 'makeup', title: 'Makeup', description: 'Glamorous party makeup, bridal looks, and bespoke hairstyling.', image: '/images/makeup.jpg' },
+  { key: 'facials', id: 'facials', title: 'Facials & Skin Treatments', description: 'Advanced facials, hydrafacial, microneedling, and dermaplaning.', image: '/images/skin.jpg' },
 ];
 
 export default function Services() {

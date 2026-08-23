@@ -10,25 +10,31 @@ const highlights = [
     title: 'Hair Services',
     description: 'Precision cuts, luxury colour, balayage, and Brazilian blow dry.',
     link: '/services#hair',
-    image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=50',
+    image: '/images/hair.jpg',
   },
   {
     title: 'Japanese Head Spa',
     description: 'Traditional scalp therapy for deep relaxation and scalp health.',
     link: '/services#head-spa',
-    image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=50',
+    image: '/images/headspa.jpg',
   },
   {
     title: 'Skin Treatments',
     description: 'Advanced facials, hydrafacial, microneedling, and dermaplaning.',
     link: '/services#facials',
-    image: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=400&q=50',
+    image: '/images/skin.jpg',
   },
   {
     title: 'Brows & Lashes',
     description: 'Perfectly shaped brows, lamination, lash lifts, and tinting.',
     link: '/services#brows-lashes',
-    image: 'https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=400&q=50',
+    image: '/images/lashes.jpg',
+  },
+  {
+    title: 'Makeup',
+    description: 'Glamorous party makeup, bridal looks, and bespoke hairstyling.',
+    link: '/services#makeup',
+    image: '/images/makeup.jpg',
   },
 ];
 
