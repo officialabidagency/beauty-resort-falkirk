@@ -55,6 +55,7 @@ export const services = {
     { name: 'Party Makeup (Including Lashes)', price: '£35', description: 'Glamorous makeup look complete with strip lashes for any celebration.' },
     { name: 'Bridal Makeup', price: 'From £90', description: 'Timeless, flawless bridal makeup tailored to your vision.' },
     { name: 'Bridal Hair Styling', price: 'Contact for pricing', description: 'Bespoke bridal hairstyling to complement your look.' },
+    { name: 'Hair Up', price: 'From £30', description: 'Elegant hair updos for any special occasion.' },
   ],
   facials: [
     { name: 'Express Facial', price: '£25', description: 'A quick refresh to cleanse, tone, and hydrate your skin.' },
