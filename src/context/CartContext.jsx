@@ -23,11 +23,17 @@ export function CartProvider({ children }) {
 
   const clearCart = useCallback(() => setItems([]), []);
 
+  const totalPrice = items.reduce((sum, item) => {
+    const base = parseInt(item.price.replace(/[^0-9]/g, '')) || 0;
+    const addonTotal = item.addOns?.reduce((a, ad) => a + (parseInt(ad.price.replace(/[^0-9]/g, '')) || 0), 0) || 0;
+    return sum + base + addonTotal;
+  }, 0);
+
   const count = items.length;
 
   return (
     <CartContext.Provider
-      value={{ items, addItem, removeItem, clearCart, count, isOpen, setIsOpen, toast }}
+      value={{ items, addItem, removeItem, clearCart, count, isOpen, setIsOpen, toast, totalPrice }}
     >
       {children}
     </CartContext.Provider>

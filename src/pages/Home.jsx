@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { WHATSAPP_LINK } from '../data/services';
 import BookingForm from '../components/BookingForm';
 import './Home.css';
 
@@ -150,9 +149,9 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              <Link to="/#booking" className="btn btn-primary">
                 Book Your Appointment
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -184,9 +183,6 @@ export default function Home() {
           <h2>Ready to Treat Yourself?</h2>
           <p>Book your private appointment today and experience luxury beauty in Falkirk.</p>
           <div className="cta-actions">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
-              Book on WhatsApp
-            </a>
             <Link to="/services" className="btn btn-outline">
               Explore Services
             </Link>

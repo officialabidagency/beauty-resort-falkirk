@@ -1,8 +1,18 @@
+import { useState } from 'react';
 import { useCart } from '../context/CartContext';
 
-export default function ServiceCard({ name, price, description, featured, includes, addons }) {
+export default function ServiceCard({ name, price, description, featured, includes, addons, hasSteamAddOn }) {
   const { addItem, items } = useCart();
+  const [steamAddOn, setSteamAddOn] = useState(false);
   const isInCart = items.some((i) => i.name === name);
+
+  const handleAdd = () => {
+    const item = { name, price };
+    if (hasSteamAddOn && steamAddOn) {
+      item.addOns = [{ name: 'Steam Add-on', price: '£5' }];
+    }
+    addItem(item);
+  };
 
   return (
     <div className={`service-card ${featured ? 'featured' : ''}`} data-aos="fade-up" data-aos-duration="600">
@@ -36,10 +46,21 @@ export default function ServiceCard({ name, price, description, featured, includ
         </div>
       )}
 
+      {hasSteamAddOn && (
+        <label className="steam-toggle">
+          <input
+            type="checkbox"
+            checked={steamAddOn}
+            onChange={() => setSteamAddOn(!steamAddOn)}
+          />
+          <span className="steam-toggle-label">+ £5 Steam Add-on</span>
+        </label>
+      )}
+
       <div className="service-actions">
         <button
           className="btn btn-primary service-add-btn"
-          onClick={() => addItem({ name, price })}
+          onClick={handleAdd}
           disabled={isInCart}
         >
           {isInCart ? (
@@ -47,16 +68,10 @@ export default function ServiceCard({ name, price, description, featured, includ
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
-              Added
+              Selected
             </>
           ) : (
-            <>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <line x1="5" y1="12" x2="19" y2="12" />
-              </svg>
-              Add to Cart
-            </>
+            'Select'
           )}
         </button>
       </div>

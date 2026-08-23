@@ -387,6 +387,27 @@ ul {
   gap: 6px;
 }
 
+.steam-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.steam-toggle input {
+  accent-color: var(--gold);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.steam-toggle-label {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  letter-spacing: 0.5px;
+}
+
 @media (max-width: 768px) {
   :root {
     --section-padding: 60px 0;

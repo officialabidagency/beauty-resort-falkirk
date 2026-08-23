@@ -57,10 +57,11 @@ export const services = {
   ],
   facials: [
     { name: 'Express Facial', price: '£25', description: 'A quick refresh to cleanse, tone, and hydrate your skin.' },
-    { name: 'Luxury / Advanced Facial', price: '£40', description: 'A deeply nourishing facial using premium products.' },
-    { name: 'Dermaplaning Facial', price: '£40', description: 'Gentle exfoliation revealing smooth, radiant skin.' },
-    { name: 'Dermaplaning + LED Light Therapy', price: '£45', description: 'Advanced exfoliation combined with LED rejuvenation.' },
-    { name: 'Hydra Dermabrasion (Hydrafacial)', price: '£60', description: 'Deep cleansing, exfoliation, and hydration in one treatment.' },
+    { name: 'Luxury / Advanced Facial', price: '£40', description: 'A deeply nourishing facial using premium products.', hasSteamAddOn: true },
+    { name: 'Aloe Vera Facial', price: '£35', description: 'Soothing aloe vera treatment for calm, hydrated skin.', hasSteamAddOn: true },
+    { name: 'Dermaplaning Facial', price: '£35', description: 'Gentle exfoliation revealing smooth, radiant skin.' },
+    { name: 'Dermaplaning + LED Light Therapy', price: '£40', description: 'Advanced exfoliation combined with LED rejuvenation.' },
+    { name: 'Hydra Dermabrasion (Hydrafacial)', price: '£60', description: 'Deep cleansing, exfoliation, and hydration in one treatment.', hasSteamAddOn: true },
     { name: 'Microneedling', price: '£70', description: 'Collagen induction therapy for skin renewal and texture improvement.' },
   ],
 };

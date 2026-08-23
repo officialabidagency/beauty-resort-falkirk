@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Cart.css';
 
 export default function Cart() {
-  const { items, removeItem, clearCart, count, isOpen, setIsOpen } = useCart();
+  const { items, removeItem, clearCart, count, isOpen, setIsOpen, totalPrice } = useCart();
   const navigate = useNavigate();
 
   const handleConfirmBooking = () => {
@@ -35,6 +35,14 @@ export default function Cart() {
           </button>
         </div>
 
+        <div className="cart-cash-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23" />
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+          Cash Only
+        </div>
+
         {items.length === 0 ? (
           <div className="cart-empty">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gray-700)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
@@ -42,8 +50,8 @@ export default function Cart() {
               <circle cx="20" cy="21" r="1" />
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
             </svg>
-            <p>No services added yet</p>
-            <span>Browse services and add them to your booking</span>
+            <p>No services selected yet</p>
+            <span>Browse services and select treatments</span>
           </div>
         ) : (
           <>
@@ -54,6 +62,13 @@ export default function Cart() {
                     <span className="cart-item-name">{item.name}</span>
                     <span className="cart-item-price">{item.price}</span>
                   </div>
+                  {item.addOns && item.addOns.length > 0 && (
+                    <div className="cart-item-addons">
+                      {item.addOns.map((ad) => (
+                        <span key={ad.name} className="cart-item-addon">+ {ad.name} ({ad.price})</span>
+                      ))}
+                    </div>
+                  )}
                   <button className="cart-item-remove" onClick={() => removeItem(item.name)} aria-label="Remove">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="18" y1="6" x2="6" y2="18" />
@@ -63,6 +78,11 @@ export default function Cart() {
                 </li>
               ))}
             </ul>
+
+            <div className="cart-total">
+              <span>Total</span>
+              <span className="cart-total-price">£{totalPrice}</span>
+            </div>
 
             <div className="cart-footer">
               <button className="btn btn-outline cart-clear" onClick={clearCart}>
