@@ -21,6 +21,7 @@ export const services = {
     { name: 'Toner / Glossing', price: 'From £70', description: 'Add shine and dimension with a toner or gloss treatment.' },
     { name: 'Balayage', price: 'From £95', description: 'Hand-painted highlights for a sun-kissed, natural finish.' },
     { name: 'Brazilian Blow Dry / Hair Botox', price: 'From £90', description: 'Smoothing treatment for frizz-free, silky hair.' },
+    { name: 'Hair Jewellery', price: '£7–£10', description: 'Hair jewellery available to purchase or add to your hairstyle. Ask me about the available designs.' },
   ],
   headSpa: [
     {
@@ -62,6 +63,7 @@ export const services = {
     { name: 'Dermaplaning Facial', price: '£35', description: 'Gentle exfoliation revealing smooth, radiant skin.' },
     { name: 'Dermaplaning + LED Light Therapy', price: '£40', description: 'Advanced exfoliation combined with LED rejuvenation.' },
     { name: 'Hydra Dermabrasion (Hydrafacial)', price: '£60', description: 'Deep cleansing, exfoliation, and hydration in one treatment.', hasSteamAddOn: true },
+    { name: 'Dermaplaning Hydra Facial', price: '£75', description: 'Dermaplaning, Hydra Hydration, Hyaluronic Acid, Cold Hammer, Cooling Jelly Mask, Moisturiser & SPF. Designed to leave your skin feeling smooth, hydrated, refreshed and beautifully glowing.' },
     { name: 'Microneedling', price: '£70', description: 'Collagen induction therapy for skin renewal and texture improvement.' },
   ],
 };

@@ -165,14 +165,14 @@ export default function Home() {
 
       <section className="gallery-strip">
         <div className="gallery-track">
-          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=300&q=40" alt="" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=300&q=40" alt="" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=300&q=40" alt="" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=300&q=40" alt="" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&q=40" alt="" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=300&q=40" alt="" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=300&q=40" alt="" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=300&q=40" alt="" loading="lazy" />
+          <img src="/images/hair.jpg" alt="Hair Services" loading="lazy" />
+          <img src="/images/headspa.jpg" alt="Japanese Head Spa" loading="lazy" />
+          <img src="/images/skin.jpg" alt="Skin Treatments" loading="lazy" />
+          <img src="/images/lashes.jpg" alt="Brows & Lashes" loading="lazy" />
+          <img src="/images/makeup.jpg" alt="Makeup" loading="lazy" />
+          <img src="/images/hair.jpg" alt="Hair Services" loading="lazy" />
+          <img src="/images/headspa.jpg" alt="Japanese Head Spa" loading="lazy" />
+          <img src="/images/skin.jpg" alt="Skin Treatments" loading="lazy" />
         </div>
       </section>
 
