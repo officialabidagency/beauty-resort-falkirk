@@ -63,7 +63,7 @@ export const services = {
     { name: 'Dermaplaning Facial', price: '£35', description: 'Gentle exfoliation revealing smooth, radiant skin.' },
     { name: 'Dermaplaning + LED Light Therapy', price: '£40', description: 'Advanced exfoliation combined with LED rejuvenation.' },
     { name: 'Hydra Dermabrasion (Hydrafacial)', price: '£60', description: 'Deep cleansing, exfoliation, and hydration in one treatment.', hasSteamAddOn: true },
-    { name: 'Dermaplaning Hydra Facial', price: '£75', description: 'Dermaplaning, Hydra Hydration, Hyaluronic Acid, Cold Hammer, Cooling Jelly Mask, Moisturiser & SPF. Designed to leave your skin feeling smooth, hydrated, refreshed and beautifully glowing.' },
+    { name: 'Glass Skin Effect ✨', price: '£75', description: 'Dermaplaning, Hydra Hydration, Hyaluronic Acid, Cold Hammer, Cooling Jelly Mask, Moisturiser & SPF. Designed to leave your skin feeling smooth, hydrated, refreshed and beautifully glowing.' },
     { name: 'Microneedling', price: '£70', description: 'Collagen induction therapy for skin renewal and texture improvement.' },
   ],
 };
