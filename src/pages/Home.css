@@ -132,6 +132,13 @@
   position: relative;
 }
 
+.highlight-card-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .highlight-card:hover {
   border-color: var(--gold-dark);
   transform: translateY(-8px);
@@ -197,6 +204,30 @@
 
 .highlight-card:hover .highlight-arrow {
   gap: 12px;
+}
+
+.highlight-form-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  margin: 0 24px 24px;
+  background: transparent;
+  border: 1px solid var(--gold-dark);
+  border-radius: 10px;
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.highlight-form-link:hover {
+  background: var(--gold-dark);
+  color: var(--white);
+  border-color: var(--gold);
 }
 
 /* ── About ── */

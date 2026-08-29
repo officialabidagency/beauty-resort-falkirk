@@ -11,30 +11,35 @@ const highlights = [
     description: 'Precision cuts, luxury colour, balayage, and Brazilian blow dry.',
     link: '/services#hair',
     image: '/images/hair.jpg',
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfD-YlMEjbYuG9xBMYcvDozgaZl9L-Frc2g6X8_hgPK7dIIXQ/viewform?usp=publish-editor',
   },
   {
     title: 'Japanese Head Spa',
     description: 'Traditional scalp therapy for deep relaxation and scalp health.',
     link: '/services#head-spa',
     image: '/images/headspa.jpg',
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScqGFpIA0xtBSOEhi8hTG-f0aJQmh5A3bR-76UmbRZ4_Y3cCQ/viewform?usp=publish-editor',
   },
   {
     title: 'Skin Treatments',
     description: 'Advanced facials, hydrafacial, microneedling, and dermaplaning.',
     link: '/services#facials',
     image: '/images/skin.jpg',
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe3XvjNUYZ0XACJSvJf9XoYG2r74cIwCZoDV1OEZYVrpwin_A/viewform?usp=publish-editor',
   },
   {
     title: 'Brows & Lashes',
     description: 'Perfectly shaped brows, lamination, lash lifts, and tinting.',
     link: '/services#brows-lashes',
     image: '/images/lashes.jpg',
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeZd7axWB30jKKuE4uQt1Ojq7zt6g6KdO9k7O0ZVk9vu1a5Lg/viewform?usp=publish-editor',
   },
   {
     title: 'Makeup',
     description: 'Glamorous party makeup, bridal looks, and bespoke hairstyling.',
     link: '/services#makeup',
     image: '/images/makeup.jpg',
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdCpDfibkTvCYM96e8G6O0caQA2gUIehVO3s-cyCnoRMXBZUA/viewform?usp=publish-editor',
   },
 ];
 
@@ -89,29 +94,43 @@ export default function Home() {
           </p>
           <div className="highlights-grid">
             {highlights.map((item, index) => (
-              <Link
+              <div
                 key={item.title}
-                to={item.link}
                 className="highlight-card"
                 data-aos="fade-up"
                 data-aos-delay={150 * (index + 1)}
               >
-                <div className="highlight-img-wrap">
-                  <img src={item.image} alt={item.title} className="highlight-img" loading="lazy" />
-                  <div className="highlight-img-overlay" />
-                </div>
-                <div className="highlight-body">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <span className="highlight-arrow">
-                    View Services
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
+                <Link to={item.link} className="highlight-card-link">
+                  <div className="highlight-img-wrap">
+                    <img src={item.image} alt={item.title} className="highlight-img" loading="lazy" />
+                    <div className="highlight-img-overlay" />
+                  </div>
+                  <div className="highlight-body">
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <span className="highlight-arrow">
+                      View Services
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
+                <a
+                  href={item.formUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="highlight-form-link"
+                >
+                  Fill Consultation Form
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
             ))}
           </div>
         </div>

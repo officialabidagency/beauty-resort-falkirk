@@ -66,6 +66,7 @@ export const services = {
     { name: 'Hydra Dermabrasion (Hydrafacial)', price: '£60', description: 'Deep cleansing, exfoliation, and hydration in one treatment.', hasSteamAddOn: true },
     { name: 'Glass Skin Effect ✨', price: '£75', description: 'Dermaplaning, Hydra Hydration, Hyaluronic Acid, Cold Hammer, Cooling Jelly Mask, Moisturiser & SPF. Designed to leave your skin feeling smooth, hydrated, refreshed and beautifully glowing.' },
     { name: 'Microneedling', price: '£70', description: 'Collagen induction therapy for skin renewal and texture improvement.' },
+    { name: 'Back, Neck & Shoulder Massage', price: '£30', description: 'A relaxing massage focusing on the back, neck and shoulders, designed to ease everyday tension and leave you feeling relaxed and refreshed. Perfect for: tight muscles, everyday stress and general relaxation. Please note: This is a relaxation massage and not a medical treatment.', duration: '30 minutes' },
   ],
 };
 
