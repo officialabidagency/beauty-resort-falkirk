@@ -18,7 +18,7 @@ const highlights = [
     description: 'Traditional scalp therapy for deep relaxation and scalp health.',
     link: '/services#head-spa',
     image: '/images/headspa.jpg',
-    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScqGFpIA0xtBSOEhi8hTG-f0aJQmh5A3bR-76UmbRZ4_Y3cCQ/viewform?usp=publish-editor',
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeKncPeaGGLDxoUUAyxGon_SGHq7DkQ94lpZCrUHcpS9KhU3Q/viewform?usp=publish-editor',
   },
   {
     title: 'Skin Treatments',
