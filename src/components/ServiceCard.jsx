@@ -1,11 +1,7 @@
 import { useState } from 'react';
 import { useCart } from '../context/CartContext';
 
-<<<<<<< HEAD
 export default function ServiceCard({ name, price, description, featured, includes, addons, hasSteamAddOn, duration }) {
-=======
-export default function ServiceCard({ name, price, description, featured, includes, addons, hasSteamAddOn }) {
->>>>>>> 95eb8cd1c62eae405789e71b8a2fbe841d5677a8
   const { addItem, items } = useCart();
   const [steamAddOn, setSteamAddOn] = useState(false);
   const isInCart = items.some((i) => i.name === name);
@@ -24,10 +20,7 @@ export default function ServiceCard({ name, price, description, featured, includ
       <h3 className="service-name">{name}</h3>
       <p className="service-desc">{description}</p>
       <span className="service-price">{price}</span>
-<<<<<<< HEAD
       {duration && <span className="service-duration">{duration}</span>}
-=======
->>>>>>> 95eb8cd1c62eae405789e71b8a2fbe841d5677a8
 
       {includes && includes.length > 0 && (
         <div className="addon-section">
