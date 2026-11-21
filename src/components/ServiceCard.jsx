@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useCart } from '../context/CartContext';
 
-export default function ServiceCard({ name, price, description, featured, includes, addons, hasSteamAddOn, duration }) {
+export default function ServiceCard({ name, price, description, featured, includes, includesTitle, benefits, addons, hasSteamAddOn, duration }) {
   const { addItem, items } = useCart();
   const [steamAddOn, setSteamAddOn] = useState(false);
   const isInCart = items.some((i) => i.name === name);
@@ -24,11 +24,24 @@ export default function ServiceCard({ name, price, description, featured, includ
 
       {includes && includes.length > 0 && (
         <div className="addon-section">
-          <h4>Includes</h4>
+          <h4>{includesTitle || 'Includes'}</h4>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {includes.map((item, i) => (
               <li key={i} className="addon-item">
                 <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {benefits && benefits.length > 0 && (
+        <div className="addon-section">
+          <h4>Benefits</h4>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            {benefits.map((benefit, i) => (
+              <li key={i} className="addon-item">
+                <span>{benefit}</span>
               </li>
             ))}
           </ul>

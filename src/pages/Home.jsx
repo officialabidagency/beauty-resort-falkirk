@@ -22,10 +22,16 @@ const highlights = [
   },
   {
     title: 'Skin Treatments',
-    description: 'Advanced facials, hydrafacial, microneedling, and dermaplaning.',
+    description: 'Advanced facials, hydra dermabrasion, microneedling, and dermaplaning.',
     link: '/services#facials',
     image: '/images/skin.jpg',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe3XvjNUYZ0XACJSvJf9XoYG2r74cIwCZoDV1OEZYVrpwin_A/viewform?usp=publish-editor',
+  },
+  {
+    title: 'Massage',
+    description: 'Swedish, hot stone and luxury massage treatments to release tension.',
+    link: '/services#massage',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=50',
   },
   {
     title: 'Brows & Lashes',
@@ -117,19 +123,21 @@ export default function Home() {
                     </span>
                   </div>
                 </Link>
-                <a
-                  href={item.formUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="highlight-form-link"
-                >
-                  Fill Consultation Form
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                </a>
+                {item.formUrl && (
+                  <a
+                    href={item.formUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="highlight-form-link"
+                  >
+                    Fill Consultation Form
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </a>
+                )}
               </div>
             ))}
           </div>

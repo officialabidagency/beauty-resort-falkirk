@@ -65,7 +65,7 @@ export default function BookingForm() {
 
   const calculateTotal = () => {
     return selectedDetails.reduce((sum, s) => {
-      const base = parseInt(s.price.replace(/[^0-9]/g, '')) || 0;
+      const base = parseInt(s.price.match(/\d+/)?.[0] ?? 0) || 0;
       const steam = addOns[s.name] ? 5 : 0;
       return sum + base + steam;
     }, 0);

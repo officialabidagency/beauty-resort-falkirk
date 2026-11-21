@@ -24,8 +24,8 @@ export function CartProvider({ children }) {
   const clearCart = useCallback(() => setItems([]), []);
 
   const totalPrice = items.reduce((sum, item) => {
-    const base = parseInt(item.price.replace(/[^0-9]/g, '')) || 0;
-    const addonTotal = item.addOns?.reduce((a, ad) => a + (parseInt(ad.price.replace(/[^0-9]/g, '')) || 0), 0) || 0;
+    const base = parseInt(item.price.match(/\d+/)?.[0] ?? 0) || 0;
+    const addonTotal = item.addOns?.reduce((a, ad) => a + (parseInt(ad.price.match(/\d+/)?.[0] ?? 0) || 0), 0) || 0;
     return sum + base + addonTotal;
   }, 0);
 

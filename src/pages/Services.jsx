@@ -9,10 +9,11 @@ import '../index.css';
 
 const categories = [
   { key: 'hair', id: 'hair', title: 'Hair Services', description: 'Precision cuts, luxury colour, and styling — crafted to perfection.', image: '/images/hair.jpg' },
+  { key: 'massage', id: 'massage', title: 'Massage', description: 'Swedish, hot stone and luxury massage treatments to release tension.', image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=70' },
   { key: 'headSpa', id: 'head-spa', title: 'Japanese Head Spa', description: 'Traditional scalp therapy for deep relaxation and scalp health.', image: '/images/headspa.jpg' },
   { key: 'browsLashes', id: 'brows-lashes', title: 'Brows & Lashes', description: 'Perfectly shaped brows, lamination, lash lifts, and tinting.', image: '/images/lashes.jpg' },
   { key: 'makeup', id: 'makeup', title: 'Makeup', description: 'Glamorous party makeup, bridal looks, and bespoke hairstyling.', image: '/images/makeup.jpg' },
-  { key: 'facials', id: 'facials', title: 'Facials & Skin Treatments', description: 'Advanced facials, hydrafacial, microneedling, and dermaplaning.', image: '/images/skin.jpg' },
+  { key: 'facials', id: 'facials', title: 'Facials & Skin Treatments', description: 'Advanced facials, hydra dermabrasion, microneedling, and dermaplaning.', image: '/images/skin.jpg' },
 ];
 
 export default function Services() {
