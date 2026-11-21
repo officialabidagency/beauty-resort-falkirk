@@ -106,7 +106,21 @@ export const services = {
     { name: 'Express Facial', price: '£25', description: 'A quick refresh to cleanse, tone, and hydrate your skin.' },
     { name: 'Luxury / Advanced Facial', price: '£40', description: 'A deeply nourishing facial using premium products.', hasSteamAddOn: true },
     { name: 'Aloe Vera Facial', price: '£35', description: 'Soothing aloe vera treatment for calm, hydrated skin.', hasSteamAddOn: true },
-    { name: 'Dermaplaning Facial', price: '£35', description: 'Gentle exfoliation revealing smooth, radiant skin.' },
+    {
+      name: 'Dermaplaning Facial',
+      price: '£35',
+      description: 'Gentle exfoliation revealing smooth, radiant skin.',
+      benefits: [
+        'Gently removes dead skin cells and peach fuzz',
+        'Leaves skin feeling incredibly smooth and soft',
+        'Helps improve the appearance of uneven skin texture',
+        'Creates a brighter, more radiant complexion',
+        'Helps makeup apply more smoothly',
+        'Allows skincare products to spread more evenly',
+        'Helps reduce the appearance of dull, tired-looking skin',
+        'Gives an instant fresh and glowing appearance',
+      ],
+    },
     { name: 'Dermaplaning + LED Light Therapy', price: '£40', description: 'Advanced exfoliation combined with LED rejuvenation.' },
     {
       name: 'Hydra Dermabrasion',
