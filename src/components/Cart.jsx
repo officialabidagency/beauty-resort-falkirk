@@ -1,16 +1,34 @@
 import { useCart } from '../context/CartContext';
-import { useNavigate } from 'react-router-dom';
+import { WHATSAPP_NUMBER } from '../data/services';
 import './Cart.css';
 
 export default function Cart() {
   const { items, removeItem, clearCart, count, isOpen, setIsOpen, totalPrice } = useCart();
-  const navigate = useNavigate();
 
   const handleConfirmBooking = () => {
-    const serviceNames = items.map((i) => i.name).join(',');
-    const query = serviceNames ? `?services=${encodeURIComponent(serviceNames)}` : '';
+    const serviceLines = items
+      .map((item, i) => {
+        let line = `${i + 1}. ${item.name} — ${item.price}`;
+        if (item.addOns?.length) {
+          line += ` (${item.addOns.map((ad) => `${ad.name} ${ad.price}`).join(', ')})`;
+        }
+        return line;
+      })
+      .join('\n');
+
+    const message = [
+      'Booking Request',
+      '',
+      'Selected Treatments:',
+      serviceLines,
+      '',
+      `Total: £${totalPrice} (Cash Only)`,
+      '',
+      'Please confirm my appointment. Thank you!',
+    ].join('\n');
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
     setIsOpen(false);
-    navigate(`/#booking${query}`);
   };
 
   return (
