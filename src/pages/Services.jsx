@@ -13,7 +13,7 @@ const categories = [
   { key: 'headSpa', id: 'head-spa', title: 'Japanese Head Spa', description: 'Traditional scalp therapy for deep relaxation and scalp health.', image: '/images/headspa.jpg' },
   { key: 'browsLashes', id: 'brows-lashes', title: 'Brows & Lashes', description: 'Perfectly shaped brows, lamination, lash lifts, and tinting.', image: '/images/lashes.jpg' },
   { key: 'makeup', id: 'makeup', title: 'Makeup', description: 'Glamorous party makeup, bridal looks, and bespoke hairstyling.', image: '/images/makeup.jpg' },
-  { key: 'facials', id: 'facials', title: 'Facials & Skin Treatments', description: 'Advanced facials, hydra dermabrasion, microneedling, and dermaplaning.', image: '/images/skin.jpg' },
+  { key: 'facials', id: 'facials', title: 'Facials & Skin Treatments', description: 'Reveal your skin\'s natural radiance — personalised skin treatments designed to refresh, renew and restore your glow. Consultation and skin assessment required; patch testing must be completed where required by product guidelines.', image: '/images/skin.jpg' },
 ];
 
 export default function Services() {

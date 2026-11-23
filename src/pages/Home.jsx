@@ -22,7 +22,7 @@ const highlights = [
   },
   {
     title: 'Skin Treatments',
-    description: 'Advanced facials, hydra dermabrasion, microneedling, and dermaplaning.',
+    description: 'Advanced facials, chemical peels, acne treatments, microneedling, and dermaplaning.',
     link: '/services#facials',
     image: '/images/skin.jpg',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe3XvjNUYZ0XACJSvJf9XoYG2r74cIwCZoDV1OEZYVrpwin_A/viewform?usp=publish-editor',
